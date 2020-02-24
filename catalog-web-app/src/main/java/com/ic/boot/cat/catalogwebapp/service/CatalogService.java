@@ -77,7 +77,7 @@ public class CatalogService {
             Map<String, List<Product>> productsByLanguage = productsByCatalog.stream()
                     .collect(Collectors.groupingBy(Product::getLanguage));
             // Create DTO list by language
-            productsByLanguage.forEach(e -> {
+            productsByLanguage.entrySet().forEach(e -> {
                 LocalizedCatalogDto localizedCatalogDto = new LocalizedCatalogDto(e.getKey());
                 List<ProductDto> products = e.getValue().stream().map(ProductDto::new).collect(Collectors.toList());
                 localizedCatalogDto.setProducts(products);
