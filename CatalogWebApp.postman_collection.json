@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "b6019fc7-844a-4ad5-bc55-7eaf6500e235",
+		"name": "CatalogWebApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"myskates\",\n    \"country\": \"SP\",\n    \"localizedCatalogs\": [\n        {\n            \"language\": \"en\",\n            \"products\": [\n                {\n                    \"name\": \"vancouverMMX\",\n                    \"description\": \"bc cascades\"\n                },\n                {\n                    \"name\": \"calgary88\",\n                    \"description\": \"ab rockies\"\n                }\n            ]\n        },\n        {\n            \"language\": \"es\",\n            \"products\": [\n                {\n                    \"name\": \"montréal76\",\n                    \"description\": \"la deuxième population francophone\"\n                },\n                {\n                    \"name\": \"québec76\",\n                    \"description\": \"au monde après Paris\"\n                }\n            ]\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/catalog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"catalog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/catalog/myskates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"catalog",
+						"myskates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/catalog/myskates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"catalog",
+						"myskates"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
