@@ -44,7 +44,7 @@ public class CatalogService {
         upsertCatalog(catalogDto);
     }
 
-    private CatalogDto upsertCatalog(CatalogDto catalogDto) {
+    CatalogDto upsertCatalog(CatalogDto catalogDto) {
         // Upsert catalog
         Catalog catalog = new Catalog(catalogDto.getName(), catalogDto.getCountry());
         catalogRepository.save(catalog);
