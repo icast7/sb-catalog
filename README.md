@@ -3,9 +3,9 @@ This springboot app contains a REST API with CRUD endpoints to manage a localiza
 
 ### Install app
 1. The command below will perform a clean build.
-```
-./gradlew clean build
-```
+    ```
+    ./gradlew clean build
+    ```
 
 ### Run app
 
@@ -18,7 +18,7 @@ CRUD endpoints.
 
 ### Next steps
 ### Test Coverage
-1. Add unit tests
+1. Improve unit test coverage
 
 ### Security
 1. The endpoints in this API are wide open for testing purposes only. In a Production system they will need to be 
@@ -29,7 +29,8 @@ secured.
 
 ### Error handling
 1. For the sake of simplicity, exceptions are handled in for each individual endpoint. In a Production system it would 
-be much better to have a global error handling mechanism (e.g. using an error handler provided by the @ControllerAdvice 
+be much better to have a global error handling mechanism (e.g. using an error handler provided by the 
+[@ControllerAdvice](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/ControllerAdvice.html) 
 annotation).
 
 
