@@ -17,18 +17,18 @@ This springboot app contains a REST API with CRUD endpoints to manage a localiza
 CRUD endpoints.
 
 ### Next steps
-### Test Coverage
+#### Test Coverage
 1. Improve unit test coverage in all layers
 1. Add functional tests
 
-### Security
+#### Security
 1. The endpoints in this API are wide open for testing purposes only. In a Production system they will need to be 
 secured.
 
-### DB
+#### DB
 1. An H2 DB is used for demo purposes, this would not be an good solution for an API in Production.
 
-### Error handling
+#### Error handling
 1. For the sake of simplicity, exceptions are handled in for each individual endpoint. In a Production system it would 
 be much better to have a global error handling mechanism (e.g. using an error handler provided by the 
 [@ControllerAdvice](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/ControllerAdvice.html) 
