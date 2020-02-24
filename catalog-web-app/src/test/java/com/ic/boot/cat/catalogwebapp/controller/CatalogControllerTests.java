@@ -1,4 +1,4 @@
-package com.ic.boot.cat.catalogwebapp;
+package com.ic.boot.cat.catalogwebapp.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ic.boot.cat.catalogwebapp.domain.CatalogDto;
@@ -22,7 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @ExtendWith(SpringExtension.class)
 @WebMvcTest
-class CatalogWebAppApplicationTests {
+class CatalogControllerTests {
     @Autowired
     private MockMvc mockMvc;
 
