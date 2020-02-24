@@ -49,7 +49,7 @@ public class CatalogService {
         catalogRepository.save(catalog);
         // Create new products
         List<Product> catalogProducts = new ArrayList<>();
-        catalogDto.getLocalizedCatalogs().stream()
+        catalogDto.getLocalizedCatalogs()
                 .forEach(c -> {
                     // Collect products by language
                     List<Product> localizedProducts = c.getProducts().stream()
@@ -77,9 +77,9 @@ public class CatalogService {
             Map<String, List<Product>> productsByLanguage = productsByCatalog.stream()
                     .collect(Collectors.groupingBy(Product::getLanguage));
             // Create DTO list by language
-            productsByLanguage.entrySet().stream().forEach(e -> {
+            productsByLanguage.forEach(e -> {
                 LocalizedCatalogDto localizedCatalogDto = new LocalizedCatalogDto(e.getKey());
-                List<ProductDto> products = e.getValue().stream().map(p -> new ProductDto(p)).collect(Collectors.toList());
+                List<ProductDto> products = e.getValue().stream().map(ProductDto::new).collect(Collectors.toList());
                 localizedCatalogDto.setProducts(products);
                 catalogDto.addLocalizedCatalog(localizedCatalogDto);
             });
