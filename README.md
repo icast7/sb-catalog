@@ -18,7 +18,8 @@ CRUD endpoints.
 
 ### Next steps
 ### Test Coverage
-1. Improve unit test coverage
+1. Improve unit test coverage in all layers
+1. Add functional tests
 
 ### Security
 1. The endpoints in this API are wide open for testing purposes only. In a Production system they will need to be 
