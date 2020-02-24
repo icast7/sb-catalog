@@ -40,6 +40,7 @@ public class CatalogService {
     }
 
     public void updateCatalog(CatalogDto catalogDto) {
+        // Update or create if it doesn't exist
         upsertCatalog(catalogDto);
     }
 
@@ -88,7 +89,9 @@ public class CatalogService {
     }
 
     public void deleteCatalog(String name) {
+        // Delete products
         productRepository.deleteProductsByCatalog(name);
+        // Delete catalog
         if (catalogRepository.existsById(name)) {
             catalogRepository.deleteById(name);
         }
