@@ -11,8 +11,8 @@ public class ProductDto {
     @Size(max = 200)
     private String description;
 
-    public ProductDto(Product productDto){
-        this(productDto.getName(), productDto.getDescription());
+    public ProductDto(Product product){
+        this(product.getName(), product.getDescription());
     }
 
     private ProductDto(String name, String description) {
