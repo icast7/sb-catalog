@@ -15,7 +15,7 @@ public class ProductDto {
         this(product.getName(), product.getDescription());
     }
 
-    private ProductDto(String name, String description) {
+    public ProductDto(String name, String description) {
         this.name = name;
         this.description = description;
     }
