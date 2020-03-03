@@ -9,6 +9,7 @@ import com.ic.boot.cat.catalogwebapp.domain.LocalizedCatalogDto;
 import com.ic.boot.cat.catalogwebapp.domain.ProductDto;
 import com.ic.boot.cat.catalogwebapp.exception.CatalogAlreadyExistsException;
 import com.ic.boot.cat.catalogwebapp.exception.CatalogNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,6 +26,7 @@ public class CatalogService {
     private CatalogRepository catalogRepository;
     private ProductRepository productRepository;
 
+    @Autowired
     public CatalogService(CatalogRepository catalogRepository, ProductRepository productRepository) {
         this.catalogRepository = catalogRepository;
         this.productRepository = productRepository;
